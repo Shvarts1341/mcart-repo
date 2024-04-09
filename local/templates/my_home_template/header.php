@@ -64,7 +64,8 @@ use Bitrix\Main\Page\Asset;
         <div class="row align-items-center">
           <div class="col-6 col-md-6">
             <p class="mb-0">
-              <a href="#" class="mr-3"><?$APPLICATION->IncludeComponent(
+              <a href="#" class="mr-3"><span class="text-black fl-bigmug-line-phone351"></span> <span
+                  class="d-none d-md-inline-block ml-2"><?$APPLICATION->IncludeComponent(
 	"bitrix:main.include",
 	"",
 	Array(
@@ -73,8 +74,9 @@ use Bitrix\Main\Page\Asset;
 		"EDIT_TEMPLATE" => "",
 		"PATH" => "/include/phone.php"
 	)
-);?></a>
-              <a href="#"><?$APPLICATION->IncludeComponent(
+);?></span></a>
+              <a href="#"><span class="text-black fl-bigmug-line-email64"></span> <span
+                  class="d-none d-md-inline-block ml-2"><?$APPLICATION->IncludeComponent(
 	"bitrix:main.include",
 	"",
 	Array(
@@ -83,7 +85,7 @@ use Bitrix\Main\Page\Asset;
 		"EDIT_TEMPLATE" => "",
 		"PATH" => "/include/email.php"
 	)
-);?></a>
+);?></span></a>
             </p>
           </div>
           <div class="col-6 col-md-6 text-right">
@@ -150,12 +152,12 @@ use Bitrix\Main\Page\Asset;
             </nav>
             <?$APPLICATION->IncludeComponent(
 	"bitrix:menu", 
-	".default", 
+	"top_menu", 
 	array(
 		"ALLOW_MULTI_SELECT" => "N",
 		"CHILD_MENU_TYPE" => "left",
 		"DELAY" => "N",
-		"MAX_LEVEL" => "1",
+		"MAX_LEVEL" => "2",
 		"MENU_CACHE_GET_VARS" => array(
 		),
 		"MENU_CACHE_TIME" => "604800",
@@ -163,7 +165,7 @@ use Bitrix\Main\Page\Asset;
 		"MENU_CACHE_USE_GROUPS" => "Y",
 		"ROOT_MENU_TYPE" => "top",
 		"USE_EXT" => "N",
-		"COMPONENT_TEMPLATE" => ".default"
+		"COMPONENT_TEMPLATE" => "top_menu"
 	),
 	false
 );?>

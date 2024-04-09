@@ -4,7 +4,7 @@ $APPLICATION->SetTitle("Мебельная компания");
 ?>
 <div class="slide-one-item home-slider owl-carousel">
   <?
-  $GLOBALS['arrFilterPriority'] = ["PROPERTY_PRIORITY_DEAL" => '5'];
+  $GLOBALS['arrFilterPriority'] = ["PROPERTY_PRIORITY_DEAL_VALUE" => "Да"];
   $APPLICATION->IncludeComponent(
 	"bitrix:news.list", 
 	".default", 
@@ -498,7 +498,7 @@ $APPLICATION->SetTitle("Мебельная компания");
 		"INCLUDE_IBLOCK_INTO_CHAIN" => "Y",
 		"INCLUDE_SUBSECTIONS" => "Y",
 		"MESSAGE_404" => "",
-		"NEWS_COUNT" => "9",
+		"NEWS_COUNT" => "6",
 		"PAGER_BASE_LINK_ENABLE" => "N",
 		"PAGER_DESC_NUMBERING" => "N",
 		"PAGER_DESC_NUMBERING_CACHE_TIME" => "36000",
