@@ -109,7 +109,6 @@ use Bitrix\Main\Page\Asset;
             </div>
           </div>
         </div>
-
       </div>
 
       <div class="site-navbar">
