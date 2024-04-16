@@ -152,4 +152,4 @@ use Bitrix\Main\Page\Asset;
           </div>
         </div>
       </div>
-    </div>
+

@@ -1,12 +1,136 @@
 <?
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
 $APPLICATION->SetTitle("Объявления");
-?><?$APPLICATION->IncludeComponent(
+?>
+<div class="site-blocks-cover inner-page-cover overlay" style="background-image: url(<?=SITE_TEMPLATE_PATH?>/images/hero_bg_2.jpg);" data-aos="fade" data-stellar-background-ratio="0.5">
+	<div class="container">
+		<div class="row align-items-center justify-content-center text-center">
+			<div class="col-md-10">
+				<h1 class="mb-2"><?$APPLICATION->ShowTitle(false);?></h1>
+				<?$APPLICATION->IncludeComponent("bitrix:breadcrumb", "bread", Array(
+					"PATH" => "",
+					"SITE_ID" => "s1",
+					"START_FROM" => "0",
+					),
+					false
+				);?>
+			</div>
+		</div>
+	</div>
+</div>
+			</div>
+			<? if ($GLOBALS["APPLICATION"]->GetCurPage(true) == '/obyavleniya/index.php'):?>
+				<div class="pt-5">
+      <div class="container">
+        <form class="row">
+          
+          <div class="col-sm-6 col-md-4 col-lg-3 mb-4">
+            <div class="select-wrap">
+              <span class="icon icon-arrow_drop_down"></span>
+              <select name="offer-types" id="offer-types" class="form-control d-block rounded-0">
+                <option value="">Lot Area</option>
+                <option value="1000">1000</option>
+                <option value="800">800</option>
+                <option value="600">600</option>
+                <option value="400">400</option>
+                <option value="200">200</option>
+                <option value="100">100</option>
+              </select>
+            </div>
+          </div>
+          <div class="col-sm-6 col-md-4 col-lg-3 mb-4">
+            <div class="select-wrap">
+              <span class="icon icon-arrow_drop_down"></span>
+              <select name="offer-types" id="offer-types" class="form-control d-block rounded-0">
+                <option value="">Property Status</option>
+                <option value="For Sale">For Sale</option>
+                <option value="For Rent">For Rent</option>
+              </select>
+            </div>
+          </div>
+          <div class="col-sm-6 col-md-4 col-lg-3 mb-4">
+            <div class="select-wrap">
+              <span class="icon icon-arrow_drop_down"></span>
+              <select name="offer-types" id="offer-types" class="form-control d-block rounded-0">
+                <option value="">Location</option>
+                <option value="United States">United States</option>
+                <option value="United Kingdom">United Kingdom</option>
+                <option value="Canada">Canada</option>
+                <option value="Belgium">Belgium</option>
+              </select>
+            </div>
+          </div>
+          <div class="col-sm-6 col-md-4 col-lg-3 mb-4">
+            <div class="select-wrap">
+              <span class="icon icon-arrow_drop_down"></span>
+              <select name="offer-types" id="offer-types" class="form-control d-block rounded-0">
+                <option value="">Lot Area</option>
+                <option value="1000">1000</option>
+                <option value="800">800</option>
+                <option value="600">600</option>
+                <option value="400">400</option>
+                <option value="200">200</option>
+                <option value="100">100</option>
+              </select>
+            </div>
+          </div>
+          <div class="col-sm-6 col-md-4 col-lg-3 mb-4">
+            <div class="select-wrap">
+              <span class="icon icon-arrow_drop_down"></span>
+              <select name="offer-types" id="offer-types" class="form-control d-block rounded-0">
+                <option value="">Bedrooms</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5+">5+</option>
+              </select>
+            </div>
+          </div>
+          <div class="col-sm-6 col-md-4 col-lg-3 mb-4">
+            <div class="select-wrap">
+              <span class="icon icon-arrow_drop_down"></span>
+              <select name="offer-types" id="offer-types" class="form-control d-block rounded-0">
+                <option value="">Bathrooms</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5+">5+</option>
+              </select>
+            </div>
+          </div>
+          <div class="col-sm-6 col-md-4 col-lg-3 mb-4">
+            <div class="mb-4">
+              <div id="slider-range" class="border-primary"></div>
+              <input type="text" name="text" id="amount" class="form-control border-0 pl-0 bg-white" disabled="" />
+            </div>
+          </div>
+          <div class="col-sm-6 col-md-4 col-lg-3 mb-4">
+            <input type="submit" class="btn btn-primary btn-block form-control-same-height rounded-0" value="Search">
+          </div>
+          
+        </form>
+
+        
+      </div>
+    </div>
+
+			<?else:?>
+
+			<?endif?>
+				
+			<? if ($GLOBALS["APPLICATION"]->GetCurPage(true) == '/obyavleniya/index.php'):?>
+				<div class="site-section site-section-sm bg-light">
+					<div class="container">
+			<?else:?>
+			<?endif?>
+<?$APPLICATION->IncludeComponent(
 	"bitrix:news", 
-	".default", 
+	"ads", 
 	array(
-		"ADD_ELEMENT_CHAIN" => "N",
-		"ADD_SECTIONS_CHAIN" => "Y",
+		"ADD_ELEMENT_CHAIN" => "Y",
+		"ADD_SECTIONS_CHAIN" => "N",
 		"AJAX_MODE" => "N",
 		"AJAX_OPTION_ADDITIONAL" => "",
 		"AJAX_OPTION_HISTORY" => "N",
@@ -25,18 +149,20 @@ $APPLICATION->SetTitle("Объявления");
 			0 => "",
 			1 => "",
 		),
-		"DETAIL_PAGER_SHOW_ALL" => "Y",
+		"DETAIL_PAGER_SHOW_ALL" => "N",
 		"DETAIL_PAGER_TEMPLATE" => "",
 		"DETAIL_PAGER_TITLE" => "Страница",
 		"DETAIL_PROPERTY_CODE" => array(
-			0 => "NUMBER_OF_BATHROOMS",
-			1 => "NUMBER_OF_FLOORS",
-			2 => "GARAGE",
-			3 => "TOTAL_AREA",
-			4 => "PRIORITY_DEAL",
-			5 => "LINKS",
-			6 => "PRICE",
-			7 => "",
+			0 => "LINKS",
+			1 => "PRICE",
+			2 => "PRIORITY_DEAL",
+			3 => "NUMBER_OF_FLOORS",
+			4 => "TOTAL_AREA",
+			5 => "NUMBER_OF_BATHROOMS",
+			6 => "GARAGE",
+			7 => "ADDITIONAL_MATERIALS",
+			8 => "GALLERY",
+			9 => "",
 		),
 		"DETAIL_SET_CANONICAL_URL" => "N",
 		"DISPLAY_BOTTOM_PAGER" => "Y",
@@ -45,29 +171,31 @@ $APPLICATION->SetTitle("Объявления");
 		"HIDE_LINK_WHEN_NO_DETAIL" => "N",
 		"IBLOCK_ID" => "5",
 		"IBLOCK_TYPE" => "ads",
-		"INCLUDE_IBLOCK_INTO_CHAIN" => "Y",
+		"INCLUDE_IBLOCK_INTO_CHAIN" => "N",
 		"LIST_ACTIVE_DATE_FORMAT" => "d.m.Y",
 		"LIST_FIELD_CODE" => array(
 			0 => "",
 			1 => "",
 		),
 		"LIST_PROPERTY_CODE" => array(
-			0 => "NUMBER_OF_BATHROOMS",
-			1 => "NUMBER_OF_FLOORS",
-			2 => "TOTAL_AREA",
-			3 => "PRIORITY_DEAL",
-			4 => "PRICE",
-			5 => "",
+			0 => "LINKS",
+			1 => "PRICE",
+			2 => "PRIORITY_DEAL",
+			3 => "NUMBER_OF_FLOORS",
+			4 => "TOTAL_AREA",
+			5 => "NUMBER_OF_BATHROOMS",
+			6 => "GARAGE",
+			7 => "",
 		),
 		"MESSAGE_404" => "",
 		"META_DESCRIPTION" => "-",
 		"META_KEYWORDS" => "-",
-		"NEWS_COUNT" => "20",
-		"PAGER_BASE_LINK_ENABLE" => "N",
+		"NEWS_COUNT" => "6",
+		"PAGER_BASE_LINK_ENABLE" => "Y",
 		"PAGER_DESC_NUMBERING" => "N",
 		"PAGER_DESC_NUMBERING_CACHE_TIME" => "36000",
 		"PAGER_SHOW_ALL" => "N",
-		"PAGER_SHOW_ALWAYS" => "N",
+		"PAGER_SHOW_ALWAYS" => "Y",
 		"PAGER_TEMPLATE" => ".default",
 		"PAGER_TITLE" => "Новости",
 		"PREVIEW_TRUNCATE_LEN" => "",
@@ -89,11 +217,13 @@ $APPLICATION->SetTitle("Объявления");
 		"USE_REVIEW" => "N",
 		"USE_RSS" => "N",
 		"USE_SEARCH" => "N",
-		"COMPONENT_TEMPLATE" => ".default",
+		"COMPONENT_TEMPLATE" => "ads",
 		"DISPLAY_DATE" => "Y",
 		"DISPLAY_PICTURE" => "Y",
 		"DISPLAY_PREVIEW_TEXT" => "Y",
 		"USE_SHARE" => "N",
+		"PAGER_BASE_LINK" => "",
+		"PAGER_PARAMS_NAME" => "arrPager",
 		"SEF_URL_TEMPLATES" => array(
 			"news" => "",
 			"section" => "",
@@ -101,4 +231,7 @@ $APPLICATION->SetTitle("Объявления");
 		)
 	),
 	false
-);?><?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>
+);?>
+</div>
+</div>
+<?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>

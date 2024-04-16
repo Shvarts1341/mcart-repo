@@ -1,11 +1,8 @@
 <?
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
 $APPLICATION->SetTitle("Мебельная компания");
-?>
-
-<div class="slide-one-item home-slider owl-carousel">
-	 
-	<?$GLOBALS['arrFilterPriority'] = ["PROPERTY_PRIORITY_DEAL_VALUE" => "Да"];
+?><div class="slide-one-item home-slider owl-carousel">
+	 <?$GLOBALS['arrFilterPriority'] = ["PROPERTY_PRIORITY_DEAL_VALUE" => "Да"];
 	$APPLICATION->IncludeComponent(
 		"bitrix:news.list", 
 		"slider", 
@@ -56,8 +53,7 @@ $APPLICATION->SetTitle("Мебельная компания");
 			"PROPERTY_CODE" => array(
 				0 => "PRIORITY_DEAL",
 				1 => "PRICE",
-				2 => "Price",
-				3 => "",
+				2 => "",
 			),
 			"SET_BROWSER_TITLE" => "Y",
 			"SET_LAST_MODIFIED" => "N",
@@ -76,158 +72,132 @@ $APPLICATION->SetTitle("Мебельная компания");
 	);
 	?>
 </div>
-
-	
-
 <div class="py-5">
 	<div class="container">
 		<div class="row">
 			<div class="col-md-6 col-lg-4 mb-3 mb-lg-0">
 				<div class="feature d-flex align-items-start">
-					<?$APPLICATION->IncludeComponent(
-						"bitrix:main.include",
-						"",
-						Array(
-							"AREA_FILE_SHOW" => "file",
-							"AREA_FILE_SUFFIX" => "inc",
-							"EDIT_TEMPLATE" => "",
-							"PATH" => "/include/properties.php"
-						)
-					);?>
+					 <?$APPLICATION->IncludeComponent(
+	"bitrix:main.include",
+	"",
+	Array(
+		"AREA_FILE_SHOW" => "file",
+		"AREA_FILE_SUFFIX" => "inc",
+		"EDIT_TEMPLATE" => "",
+		"PATH" => "/include/properties.php"
+	)
+);?>
 				</div>
 			</div>
 			<div class="col-md-6 col-lg-4 mb-3 mb-lg-0">
 				<div class="feature d-flex align-items-start">
-					<?$APPLICATION->IncludeComponent(
-						"bitrix:main.include",
-						"",
-						Array(
-							"AREA_FILE_SHOW" => "file",
-							"AREA_FILE_SUFFIX" => "inc",
-							"EDIT_TEMPLATE" => "",
-							"PATH" => "/include/sale.php"
-						)
-					);?>
+					 <?$APPLICATION->IncludeComponent(
+	"bitrix:main.include",
+	"",
+	Array(
+		"AREA_FILE_SHOW" => "file",
+		"AREA_FILE_SUFFIX" => "inc",
+		"EDIT_TEMPLATE" => "",
+		"PATH" => "/include/sale.php"
+	)
+);?>
 				</div>
 			</div>
 			<div class="col-md-6 col-lg-4 mb-3 mb-lg-0">
 				<div class="feature d-flex align-items-start">
-					<?$APPLICATION->IncludeComponent(
-						"bitrix:main.include",
-						"",
-						Array(
-							"AREA_FILE_SHOW" => "file",
-							"AREA_FILE_SUFFIX" => "inc",
-							"EDIT_TEMPLATE" => "",
-							"PATH" => "/include/location.php"
-						)
-					);?>
+					 <?$APPLICATION->IncludeComponent(
+	"bitrix:main.include",
+	"",
+	Array(
+		"AREA_FILE_SHOW" => "file",
+		"AREA_FILE_SUFFIX" => "inc",
+		"EDIT_TEMPLATE" => "",
+		"PATH" => "/include/location.php"
+	)
+);?>
 				</div>
 			</div>
 		</div>
 	</div>
 </div>
-
-<br>
-<br>
-
+ <br>
+ <br>
 <div class="site-section site-section-sm bg-light">
 	<div class="container">
-		<?$APPLICATION->IncludeComponent(
-			"bitrix:news.line",
-			"properties",
-			Array(
-				"ACTIVE_DATE_FORMAT" => "",
-				"CACHE_GROUPS" => "Y",
-				"CACHE_TIME" => "43200",
-				"CACHE_TYPE" => "A",
-				"COMPONENT_TEMPLATE" => ".default",
-				"DETAIL_URL" => "#IBLOCK_CODE#/#ELEMENT_CODE#/",
-				"FIELD_CODE" =>
-					array(
-						0=>"PREVIEW_TEXT",
-						1=>"PREVIEW_PICTURE",
-						2=>"PROPERTY_PRICE",
-						3=>"PROPERTY_NUMBER_OF_FLOORS",
-						4=>"PROPERTY_TOTAL_AREA",
-						5=>"PROPERTY_NUMBER_OF_BATHROOMS",
-						6=>"PROPERTY_GARAGE",
-					),
-				"IBLOCKS" => array(0=>"5",),
-				"IBLOCK_TYPE" => "ads",
-				"NEWS_COUNT" => "9",
-				"SORT_BY1" => "ACTIVE_FROM",
-				"SORT_BY2" => "SORT",
-				"SORT_ORDER1" => "DESC",
-				"SORT_ORDER2" => "ASC"
-			)
-	);?>
+		 <?$APPLICATION->IncludeComponent(
+	"bitrix:news.line",
+	"properties",
+	Array(
+		"ACTIVE_DATE_FORMAT" => "",
+		"CACHE_GROUPS" => "Y",
+		"CACHE_TIME" => "43200",
+		"CACHE_TYPE" => "A",
+		"COMPONENT_TEMPLATE" => ".default",
+		"DETAIL_URL" => "#IBLOCK_CODE#/#ELEMENT_CODE#/",
+		"FIELD_CODE" => array(0=>"PREVIEW_TEXT",1=>"PREVIEW_PICTURE",2=>"PROPERTY_PRICE",3=>"PROPERTY_NUMBER_OF_FLOORS",4=>"PROPERTY_TOTAL_AREA",5=>"PROPERTY_NUMBER_OF_BATHROOMS",6=>"PROPERTY_GARAGE",),
+		"IBLOCKS" => array(0=>"5",),
+		"IBLOCK_TYPE" => "ads",
+		"NEWS_COUNT" => "9",
+		"SORT_BY1" => "ACTIVE_FROM",
+		"SORT_BY2" => "SORT",
+		"SORT_ORDER1" => "DESC",
+		"SORT_ORDER2" => "ASC"
+	)
+);?>
 	</div>
 </div>
-
-<br>
-<br>
-	
+ <br>
+ <br>
 <div class="site-section">
 	<div class="container">
-
-		<?$APPLICATION->IncludeComponent(
-			"bitrix:news.line",
-			"services",
-			Array(
-				"ACTIVE_DATE_FORMAT" => "d.m.Y",
-				"CACHE_GROUPS" => "Y",
-				"CACHE_TIME" => "300",
-				"CACHE_TYPE" => "A",
-				"COMPONENT_TEMPLATE" => ".default",
-				"DETAIL_URL" => "",
-				"FIELD_CODE" => array(0=>"NAME",1=>"PREVIEW_TEXT",2=>"PREVIEW_PICTURE",3=>"PROPERTY_LINK",),
-				"IBLOCKS" => array(0=>"7",),
-				"IBLOCK_TYPE" => "services",
-				"NEWS_COUNT" => "20",
-				"SORT_BY1" => "ACTIVE_FROM",
-				"SORT_BY2" => "SORT",
-				"SORT_ORDER1" => "DESC",
-				"SORT_ORDER2" => "ASC"
-			)
-		);?>
+		 <?$APPLICATION->IncludeComponent(
+	"bitrix:news.line",
+	"services",
+	Array(
+		"ACTIVE_DATE_FORMAT" => "d.m.Y",
+		"CACHE_GROUPS" => "Y",
+		"CACHE_TIME" => "300",
+		"CACHE_TYPE" => "A",
+		"COMPONENT_TEMPLATE" => ".default",
+		"DETAIL_URL" => "",
+		"FIELD_CODE" => array(0=>"NAME",1=>"PREVIEW_TEXT",2=>"PREVIEW_PICTURE",3=>"PROPERTY_LINK",),
+		"IBLOCKS" => array(0=>"7",),
+		"IBLOCK_TYPE" => "services",
+		"NEWS_COUNT" => "20",
+		"SORT_BY1" => "ACTIVE_FROM",
+		"SORT_BY2" => "SORT",
+		"SORT_ORDER1" => "DESC",
+		"SORT_ORDER2" => "ASC"
+	)
+);?>
 	</div>
 </div>
-
-<br>
-<br>
-
+ <br>
+ <br>
 <div class="site-section bg-light">
-    <div class="container">
-		<?$APPLICATION->IncludeComponent(
-			"bitrix:news.line", 
-			"news", 
-			array(
-				"ACTIVE_DATE_FORMAT" => "d.m.Y",
-				"CACHE_GROUPS" => "Y",
-				"CACHE_TIME" => "86400",
-				"CACHE_TYPE" => "A",
-				"DETAIL_URL" => "/#IBLOCK_CODE#/#ELEMENT_CODE#/",
-				"FIELD_CODE" => array(
-					0 => "PREVIEW_PICTURE",
-					1 => "PREVIEW_TEXT",
-				),
-				"IBLOCKS" => array(
-					0 => "1",
-				),
-				"IBLOCK_TYPE" => "news",
-				"NEWS_COUNT" => "3",
-				"SORT_BY1" => "ACTIVE_FROM",
-				"SORT_BY2" => "SORT",
-				"SORT_ORDER1" => "DESC",
-				"SORT_ORDER2" => "ASC",
-				"COMPONENT_TEMPLATE" => "news"
-			),
-			false
-		);?>
-    </div>
+	<div class="container">
+		 <?$APPLICATION->IncludeComponent(
+	"bitrix:news.line",
+	"news",
+	Array(
+		"ACTIVE_DATE_FORMAT" => "d.m.Y",
+		"CACHE_GROUPS" => "Y",
+		"CACHE_TIME" => "86400",
+		"CACHE_TYPE" => "A",
+		"COMPONENT_TEMPLATE" => "news",
+		"DETAIL_URL" => "/#IBLOCK_CODE#/#ELEMENT_CODE#/",
+		"FIELD_CODE" => array(0=>"PREVIEW_PICTURE",1=>"PREVIEW_TEXT",),
+		"IBLOCKS" => array(0=>"1",),
+		"IBLOCK_TYPE" => "news",
+		"NEWS_COUNT" => "3",
+		"SORT_BY1" => "ACTIVE_FROM",
+		"SORT_BY2" => "SORT",
+		"SORT_ORDER1" => "DESC",
+		"SORT_ORDER2" => "ASC"
+	)
+);?>
+	</div>
 </div>
  <br>
  <br>
- <br>
- <?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>
+ <br><?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>
