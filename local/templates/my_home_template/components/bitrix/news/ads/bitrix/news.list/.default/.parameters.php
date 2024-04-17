@@ -22,5 +22,11 @@ $arTemplateParameters = array(
 		"TYPE" => "CHECKBOX",
 		"DEFAULT" => "Y",
 	),
+	"HEADING_TITLE" => Array(
+		"NAME" => "Получение заголовка",
+		"TYPE" => "STRING",
+		"SORT" => "1",
+		"DEFAULT" => "Заголовок",
+	)
 );
 ?>

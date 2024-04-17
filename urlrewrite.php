@@ -1,6 +1,6 @@
 <?php
 $arUrlRewrite=array (
-  3 => 
+  11 => 
   array (
     'CONDITION' => '#^/lichnyy-kabinet-prodavtsa/moi-obyavleniya/#',
     'RULE' => '',

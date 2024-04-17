@@ -113,6 +113,9 @@ $APPLICATION->SetTitle("Объявления");
 	"bitrix:news", 
 	"ads", 
 	array(
+		"HEADING_TITLE" => "Объявления",
+		"SLIDER_ID" => "",
+		"DISPLAY_TITLE" => "Y",
 		"ADD_ELEMENT_CHAIN" => "Y",
 		"ADD_SECTIONS_CHAIN" => "N",
 		"AJAX_MODE" => "N",
@@ -212,7 +215,7 @@ $APPLICATION->SetTitle("Объявления");
 			"news" => "",
 			"section" => "",
 			"detail" => "#ELEMENT_CODE#/",
-		)
+		),
 	),
 	false
 );?>

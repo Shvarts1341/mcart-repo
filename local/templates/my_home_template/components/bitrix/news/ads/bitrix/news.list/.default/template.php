@@ -12,11 +12,11 @@
 /** @var CBitrixComponent $component */
 $this->setFrameMode(true);
 ?>
-
+<?dump($arParams)?>
 <div class="row mb-5">
   <div class="col-12">
     <div class="site-section-title">
-    <h2><?=GetMessage('PROPERTIES');?></h2>
+    <h2><?=$arParams["HEADING_TITLE"];?></h2>
     </div>
   </div>
 </div>
