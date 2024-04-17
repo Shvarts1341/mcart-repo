@@ -142,6 +142,7 @@ $ElementID = $APPLICATION->IncludeComponent(
 					"CACHE_FILTER" => "Y",
 					"DISPLAY_TOP_PAGER" => "N",
 					"DISPLAY_BOTTOM_PAGER" => "N",
+					"HEADING_TITLE" => $arParams["HEADING_TITLE"],
 				],
 				$component,
 				['HIDE_ICONS' => 'Y']

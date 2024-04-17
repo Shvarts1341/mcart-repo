@@ -12,7 +12,6 @@ $APPLICATION->SetTitle("Мои объявления");
 	"bitrix:news", 
 	"ads", 
 	array(
-		"HEADING_TITLE" => "Мои объявления",
 		"ADD_ELEMENT_CHAIN" => "N",
 		"ADD_SECTIONS_CHAIN" => "Y",
 		"AJAX_MODE" => "N",
@@ -99,6 +98,7 @@ $APPLICATION->SetTitle("Мои объявления");
 		"DISPLAY_PREVIEW_TEXT" => "Y",
 		"USE_SHARE" => "N",
 		"USE_FILTER" => "N",
+		"HEADING_TITLE" => "Мои объявления",
 		"SEF_URL_TEMPLATES" => array(
 			"news" => "",
 			"section" => "",

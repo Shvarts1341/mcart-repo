@@ -113,8 +113,6 @@ $APPLICATION->SetTitle("Объявления");
 	"bitrix:news", 
 	"ads", 
 	array(
-		"HEADING_TITLE" => "Объявления",
-		"SLIDER_ID" => "",
 		"DISPLAY_TITLE" => "Y",
 		"ADD_ELEMENT_CHAIN" => "Y",
 		"ADD_SECTIONS_CHAIN" => "N",
@@ -211,11 +209,12 @@ $APPLICATION->SetTitle("Объявления");
 		"USE_SHARE" => "N",
 		"PAGER_BASE_LINK" => "",
 		"PAGER_PARAMS_NAME" => "arrPager",
+		"HEADING_TITLE" => "Объявления",
 		"SEF_URL_TEMPLATES" => array(
 			"news" => "",
 			"section" => "",
 			"detail" => "#ELEMENT_CODE#/",
-		),
+		)
 	),
 	false
 );?>
