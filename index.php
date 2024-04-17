@@ -72,6 +72,9 @@ $APPLICATION->SetTitle("Мебельная компания");
 	);
 	?>
 </div>
+ <br>
+<br>
+ <br>
 <div class="py-5">
 	<div class="container">
 		<div class="row">

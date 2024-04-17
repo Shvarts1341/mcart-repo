@@ -3,6 +3,7 @@
 IncludeTemplateLangFile(__FILE__);
 ?>
 
+
 <?
 use Bitrix\Main\Page\Asset;
   Asset::getInstance()->addString("<link href='https://fonts.googleapis.com/css?family=Nunito+Sans:200,300,400,700,900|Roboto+Mono:300,400,500' rel='stylesheet' type='text/css'>");
@@ -110,8 +111,21 @@ use Bitrix\Main\Page\Asset;
           </div>
         </div>
       </div>
-
+      
       <div class="site-navbar">
+        <div class="row align-items-center">
+      <?$APPLICATION->IncludeComponent(
+	"bitrix:system.auth.form", 
+	".default", 
+	array(
+		"FORGOT_PASSWORD_URL" => "",
+		"PROFILE_URL" => "",
+		"REGISTER_URL" => "/login/",
+		"SHOW_ERRORS" => "N",
+		"COMPONENT_TEMPLATE" => ".default"
+	),
+	false
+);?></div>
         <div class="container py-1">
           <div class="row align-items-center">
             <div class="col-8 col-md-8 col-lg-4">
