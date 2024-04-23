@@ -155,6 +155,7 @@ new BX.PhoneAuth({
 			</div>
               </div>
 <?endif?>
+
 <div class="row form-group">
                 <div class="col-md-12 mb-3 mb-md-0">
 				<label for="UF_USER_BUYER" class="font-weight-bold"><?echo GetMessage("BUYER")?></label>
