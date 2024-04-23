@@ -13,11 +13,8 @@ if ($arResult['SHOW_ERRORS'] === 'Y' && $arResult['ERROR'] && !empty($arResult['
 ?>
 
 <?if($arResult["FORM_TYPE"] == "login"):?>
-	<a class="ml-5" href="<?=$arResult["AUTH_LOGIN_URL"]?>" rel="nofollow"><?echo GetMessage("auth_form_comp_auth")?></a>
+	<a class="ml-5" href="<?=$arResult["REGISTER_URL"]?>" rel="nofollow"><?echo GetMessage("auth_form_comp_auth")?></a>
 	
-
-
-
 <?
 elseif($arResult["FORM_TYPE"] == "otp"):
 ?>
