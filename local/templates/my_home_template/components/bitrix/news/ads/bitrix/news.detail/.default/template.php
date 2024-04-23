@@ -80,28 +80,28 @@ $this->setFrameMode(true);
                   <h2 class="h4 text-black mb-3">Галерея изображений</h2>
                 </div>
 				
-				<?$pathGallery = $arResult["DISPLAY_PROPERTIES"]["GALLERY"]["FILE_VALUE"];?>
+				
         <?if(count($arResult["DISPLAY_PROPERTIES"]["GALLERY"]["VALUE"]) > 1):?>
-				<?foreach($pathGallery as $arGallery):?>
-                <div class="col-sm-6 col-md-4 col-lg-3 mb-4">
-                  <img src="<?=$arGallery["SRC"];?>" alt="Image" class="img-fluid">
-                </div>
-				<?endforeach;?>
-        <?else:?>
+          <?foreach($pathGallery as $arGallery):?>
+            <div class="col-sm-6 col-md-4 col-lg-3 mb-4">
+              <img src="<?=$arGallery["SRC"];?>" alt="Image" class="img-fluid">
+            </div>
+            <?endforeach;?>
+            <?else:?>
+              <?$pathGallery = $arResult["DISPLAY_PROPERTIES"]["GALLERY"]["FILE_VALUE"];?>
           <div class="col-sm-6 col-md-4 col-lg-3 mb-4">
             <img src="<?=$pathGallery["SRC"];?>" alt="Image" class="img-fluid">
           </div>
         <?endif;?>
               </div>
 
-			  <?$pathMaterials = $arResult["DISPLAY_PROPERTIES"]["ADDITIONAL_MATERIALS"]["FILE_VALUE"];?>
-        
 			  <h2 class="h4 text-black mt-5">Дополнительные материалы</h2>
         <?if(count($arResult["DISPLAY_PROPERTIES"]["ADDITIONAL_MATERIALS"]["VALUE"]) > 1):?>
           <?foreach($pathMaterials as $arDisMaterials):?>
 						<a href="<?=$arDisMaterials["SRC"];?>">Скачать</a>
-					<?endforeach;?>
-        <?else:?>
+            <?endforeach;?>
+            <?else:?>
+          <?$pathMaterials = $arResult["DISPLAY_PROPERTIES"]["ADDITIONAL_MATERIALS"]["FILE_VALUE"];?>
           <a href="<?=$pathMaterials["SRC"];?>">Скачать</a>
         <?endif;?>
 			  
