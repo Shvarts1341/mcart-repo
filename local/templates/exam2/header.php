@@ -1,6 +1,9 @@
 <?if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)die();
 IncludeTemplateLangFile(__FILE__);
 ?>
+<!DOCTYPE html>
+<html lang="<?=LANGUAGE_ID?>">
+<head>
 <?use Bitrix\Main\Page\Asset;
 Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . "/js/jquery.min.js");
 Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . "/js/owl.carousel.min.js");
@@ -11,9 +14,6 @@ Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . "/css/owl.carousel.css");
 Asset::getInstance()->addString('<link rel="icon" type="image/vnd.microsoft.icon"  href="<?=SITE_TEMPLATE_PATH?>/img/favicon.ico">');
 Asset::getInstance()->addString('<link rel="shortcut icon" href="<?=SITE_TEMPLATE_PATH?>/img/favicon.ico">');
 ?>
-<!DOCTYPE html>
-<html lang="<?=LANGUAGE_ID?>">
-<head>
 <?$APPLICATION->ShowHead();?>
 <title><?$APPLICATION->ShowTitle()?></title>
 </head>
@@ -28,7 +28,7 @@ Asset::getInstance()->addString('<link rel="shortcut icon" href="<?=SITE_TEMPLAT
                 </div>
                 <div class="main-phone-block">
                     <?$curTime = date('H');
-                    if ($curTime >= 9 && $curTime <= 18):?>
+                    if ($curTime >= 9 && $curTime < 18):?>
                         <a href="tel:84952128506" class="phone">8 (495) 212-85-06</a>
                     <?else:?>
                         <a href="mailto:store@store.ru" class="phone">store@store.ru</a>

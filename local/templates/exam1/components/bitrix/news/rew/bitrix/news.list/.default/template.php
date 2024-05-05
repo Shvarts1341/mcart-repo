@@ -34,8 +34,8 @@ $userImage = SITE_TEMPLATE_PATH."/img/rew/no_photo.jpg";
 				</span>
 				<span class="review-block-description">
 					<?=$arItem["DISPLAY_ACTIVE_FROM"]?><?=GetMessage('YEAR')?>., 
-					<?=$arItem["PROPERTIES"]["POSITION"]["VALUE"]?>,
-					<?=$arItem["PROPERTIES"]["COMPANY"]["VALUE"]?>
+					<?=$arItem["DISPLAY_PROPERTIES"]["POSITION"]["VALUE"]?>,
+					<?=$arItem["DISPLAY_PROPERTIES"]["COMPANY"]["VALUE"]?>
 				</span>
 			</div>
 			

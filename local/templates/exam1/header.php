@@ -2,10 +2,13 @@
 <?
 IncludeTemplateLangFile(__FILE__);
 ?>
+<!DOCTYPE html>
+<html lang="<?=LANGUAGE_ID;?>">
 
+<head>
 <?use Bitrix\Main\Page\Asset;
-  Asset::getInstance()->addString('<link rel="icon" type="image/vnd.microsoft.icon"  href="<?SITE_TEMPLATE_PATH?>/img/favicon.ico">');
-  Asset::getInstance()->addString('<link rel="shortcut icon" href="<?SITE_TEMPLATE_PATH?>/img/favicon.ico">');
+  Asset::getInstance()->addString('<link rel="icon" type="image/vnd.microsoft.icon"  href="<?=SITE_TEMPLATE_PATH?>/img/favicon.ico">');
+  Asset::getInstance()->addString('<link rel="shortcut icon" href="<?=SITE_TEMPLATE_PATH?>/img/favicon.ico">');
   Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . "/css/reset.css", true);
   Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . "/css/style.css", true);
   Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . "/css/owl.carousel.css", true);
@@ -13,14 +16,8 @@ IncludeTemplateLangFile(__FILE__);
   Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . "/js/owl.carousel.min.js", true);
   Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . "/js/scripts.js", true);
 ?>
-<!DOCTYPE html>
-<html lang="<?=LANGUAGE_ID;?>">
-
-<head>
     <?$APPLICATION->ShowHead();?>
     <title><?$APPLICATION->ShowTitle()?></title>
-    
-    
 </head>
 
 <body>
@@ -34,7 +31,7 @@ IncludeTemplateLangFile(__FILE__);
                 </div>
                 <div class="main-phone-block">
                     <?$currentTime = date('H');
-                     if ($currentTime >= 9 && $currentTime <= 18):?>
+                     if ($currentTime >= 9 && $currentTime < 18):?>
                     <a href="tel:84952128506" class="phone">8 (495) 212-85-06</a>
                     <?else:?>
                     <a href="mailto:store@store.ru" class="phone">store@store.ru</a>
@@ -75,7 +72,7 @@ IncludeTemplateLangFile(__FILE__);
 		"MENU_CACHE_GET_VARS" => array(
 		),
 		"MENU_CACHE_TIME" => "3600",
-		"MENU_CACHE_TYPE" => "Y",
+		"MENU_CACHE_TYPE" => "A",
 		"MENU_CACHE_USE_GROUPS" => "Y",
 		"ROOT_MENU_TYPE" => "top",
 		"USE_EXT" => "Y",

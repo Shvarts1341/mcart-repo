@@ -19,7 +19,7 @@ foreach($arResult as $arItem):?>
 	<?endif?>
 
 	<?if ($arItem["IS_PARENT"]):?>
-
+		
 		<?if ($arItem["DEPTH_LEVEL"] == 1):?>
 			<li><a href="<?=$arItem["LINK"]?>" class="<?if ($arItem["SELECTED"]):?>root-item-selected<?else:?>root-item<?endif?>"><?=$arItem["TEXT"]?></a>
 				<ul>
