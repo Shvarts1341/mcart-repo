@@ -141,19 +141,22 @@ IncludeTemplateLangFile(__FILE__);
                 <div class="item">
                 
                     <div class="title-block">О магазине</div>
-                    <?$APPLICATION->IncludeComponent("bitrix:menu", "bottom", Array(
-	"ALLOW_MULTI_SELECT" => "N",	// Разрешить несколько активных пунктов одновременно
-		"CHILD_MENU_TYPE" => "left",	// Тип меню для остальных уровней
-		"DELAY" => "N",	// Откладывать выполнение шаблона меню
-		"MAX_LEVEL" => "1",	// Уровень вложенности меню
-		"MENU_CACHE_GET_VARS" => array(	// Значимые переменные запроса
-			0 => "",
+                    <?$APPLICATION->IncludeComponent(
+	"bitrix:menu", 
+	"bottom", 
+	array(
+		"ALLOW_MULTI_SELECT" => "N",
+		"CHILD_MENU_TYPE" => "left",
+		"DELAY" => "N",
+		"MAX_LEVEL" => "1",
+		"MENU_CACHE_GET_VARS" => array(
 		),
-		"MENU_CACHE_TIME" => "3600",	// Время кеширования (сек.)
-		"MENU_CACHE_TYPE" => "N",	// Тип кеширования
-		"MENU_CACHE_USE_GROUPS" => "Y",	// Учитывать права доступа
-		"ROOT_MENU_TYPE" => "left",	// Тип меню для первого уровня
-		"USE_EXT" => "N",	// Подключать файлы с именами вида .тип_меню.menu_ext.php
+		"MENU_CACHE_TIME" => "3600",
+		"MENU_CACHE_TYPE" => "N",
+		"MENU_CACHE_USE_GROUPS" => "Y",
+		"ROOT_MENU_TYPE" => "bottom_ex_dop",
+		"USE_EXT" => "N",
+		"COMPONENT_TEMPLATE" => "bottom"
 	),
 	false
 );?>

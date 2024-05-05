@@ -11,7 +11,7 @@ $aMenuLinks = Array(
 		"Новости", 
 		"news/", 
 		Array(), 
-		Array(), 
+		Array("CLASS_STYLE"=>"color-red"), 
 		"" 
 	),
 	Array(
@@ -38,6 +38,13 @@ $aMenuLinks = Array(
 	Array(
 		"Отзывы", 
 		"/s3/otzyvy/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Опросы", 
+		"/s3/ask/", 
 		Array(), 
 		Array(), 
 		"" 
