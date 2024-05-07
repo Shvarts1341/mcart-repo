@@ -5,7 +5,7 @@ $aMenuLinks = Array(
 		"company/", 
 		Array(), 
 		Array("DESCRIPTION"=>"текст для пункта Компания", "CLASS_STYLE"=>"color-red"), 
-		"" 
+		"CSite::InGroup(array(1,3,4,6,7,8,9,10,5))" 
 	),
 	Array(
 		"Новости", 
